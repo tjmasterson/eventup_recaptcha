@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<script src="jq.js"></script>
+<script src="form.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+    <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+        <div class="signin_half">
+            <p class="createFreeAcctBtn">Not a member yet? <br><a href="/accounts/signup/?next=/">Create a free account!</a></p>
+            <h2>WELCOME <div>BACK</div></h2>
+            <form action="" method="get" id="login_form" class="signin_form">
+                <input type='hidden' name='csrfmiddlewaretoken' value='r7WSeXdoIMI8NmLuhxhJiyaCx7dMDtt2' />
+                <fieldset>
+                    <h4>Please log in below:</h4>
+                    <input type="hidden" name="next" value="/"/>
+                            <p>
+                                <label for="id_email">Email:</label>
+                                <input id="id_email" maxlength="254" name="email" type="text" />
+                            </p>
+                            <p>
+                                <label for="id_password">Password:</label>
+                                <input id="id_password" name="password" type="password" />
+                            </p>
+                    <p class="forgot_pw">
+                        <a href="/accounts/password/reset/" title="Forgot your password?">Forgot your password?</a>
+                    </p>
+                    <div class="g-recaptcha" id="g-recaptch-widget-1"></div>
+                    <div class="logInBtnWrapper">
+                        <input type="submit" class="logInBtn" id="btn_login" value="LOG IN"/>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+
+</body>
